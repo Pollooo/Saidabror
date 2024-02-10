@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title>My Social Media Profiles</title>-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222224; /* Black background */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .social-links {
+            max-width: 450px;
+            margin: 0px auto;
+            padding: 80px;
+            background-image: url('road.jpg'); /* Replace 'your-background-image.jpg' with the path to your background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background */
+            border-radius: 0px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the social links */
+            position: relative; /* Position relative to contain the animated border */
+        }
+        .social-links h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .social-links li {
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            padding: 21px 55px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 35px;
+            transition: all 0.9s ease;
+            position: relative;
+            z-index: 2; /* Ensure icons are above the border */
+            animation: rotateIcon 1s infinite alternate; /* Add animation */
+            font-size: 15px;
+        }
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+        .facebook,
+        .twitter,
+        .instagram,
+        .linkedin,
+        .youtube,
+        .telegram,
+        .whatsapp,
+        .tiktok,
+        .snapchat {
+            font-size: 15px; /* Adjust the size of the icons */
+            padding: 20px; /* Adjust padding */
+        }
+        .facebook {
+            background-color: #3b5998; /* Facebook blue */
+        }
+        .twitter {
+            background-color: #1da1f2; /* Twitter blue */
+        }
+        .instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FCAF45, #FFDC80); /* Instagram colorful gradient */
+        }
+        .linkedin {
+            background-color: #0077b5; /* LinkedIn blue */
+        }
+        .youtube {
+            background-color: #ff0000; /* YouTube red */
+        }
+        .telegram {
+            background-color: #0088cc; /* Telegram blue */
+        }
+        .whatsapp {
+            background-color: #25D366; /* WhatsApp green */
+        }
+        .tiktok {
+            background-color: #000; /* TikTok black */
+        }
+        .snapchat {
+            background-color: #d3cf06; /* Snapchat yellow */
+            color: #dd0f0f; /* Set text color to black for better contrast */
+        }
+        .social-links .fa {
+            margin-right: 10px;
+        }
+
+        /* CSS animation for rotating the icons */
+        @keyframes rotateIcon {
+            from {
+                transform: rotate(-5deg);
+            }
+            to {
+                transform: rotate(5deg);
+            }
+        }
+
+        /* Additional style for the telegram circle */
+        .telegram-circle {
+            position: absolute;
+            bottom: 40px;
+            right: 57px;
+            background-color: #222224; /* Black background */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: vibrateIcon 0.4s infinite alternate; /* Add vibration animation */
+        }
+
+        .telegram-circle a {
+            color: #0088cc; /* Telegram blue */
+            text-decoration: none;
+            font-size: 24px; /* Adjust the size of the icon */
+        }
+
+        /* Vibration animation for the Telegram circle */
+        @keyframes vibrateIcon {
+            from {
+                transform: translateY(-2px);
+            }
+            to {
+                transform: translateY(2px);
+            }
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .social-links {
+                width: 90%; /* Adjust width for smaller screens */
+                padding: 50px; /* Adjust padding for smaller screens */
+            }
+            .social-links a {
+                padding: 12px 25px; /* Adjust padding for smaller screens */
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .social-links {
+                width: 100%; /* Adjust width for even smaller screens */
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+            .social-links a {
+                padding: 10px 20px; /* Adjust padding for even smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="social-links">
+    <h2>My Social Media Profiles</h2>
+    <ul>
+        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="https://twitter.com/" class="twitter" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/" class="youtube" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+        <li><a href="https://t.me/telegram" class="telegram" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a></li>
+        <li><a href="https://web.whatsapp.com/" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        <li><a href="https://www.tiktok.com/" class="tiktok" target="_blank"><i class="fab fa-tiktok"></i> Tik Tok</a></li>
+        <li><a href="https://www.snapchat.com/" class="snapchat" target="_blank"><i class="fab fa-snapchat-ghost"></i> Snapchat</a></li>
+        <!-- Add more social media links as needed -->
+    </ul>
+    <div class="telegram-circle">
+        <a href="https://t.me/Mr_XxXtEnTaCiOn" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+</div>
+
+</body>
+</html>
