@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<title>My Social Media Profiles</title>-->
-    
+    <title>My Social Media Profiles</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
@@ -14,13 +13,13 @@
             padding: 0; /* Remove default padding */
         }
         .social-links {
-            max-width: 450px;
-            margin: 0px auto;
-            padding: 80px;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
             background-image: url('road.jpg'); /* Replace 'your-background-image.jpg' with the path to your background image */
             background-size: cover; /* Cover the entire background */
             background-position: center; /* Center the background */
-            border-radius: 0px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center; /* Center align the social links */
             position: relative; /* Position relative to contain the animated border */
@@ -39,30 +38,18 @@
         }
         .social-links a {
             display: inline-block;
-            padding: 21px 55px;
+            padding: 20px 65px;
             color: #fff;
             text-decoration: none;
             border-radius: 35px;
             transition: all 0.9s ease;
+            margin-left: 10px; /* Add margin to the left to position the links to the right */
             position: relative;
             z-index: 2; /* Ensure icons are above the border */
             animation: rotateIcon 1s infinite alternate; /* Add animation */
-            font-size: 15px;
         }
         .social-links a:hover {
-            opacity: 0.7;
-        }
-        .facebook,
-        .twitter,
-        .instagram,
-        .linkedin,
-        .youtube,
-        .telegram,
-        .whatsapp,
-        .tiktok,
-        .snapchat {
-            font-size: 15px; /* Adjust the size of the icons */
-            padding: 20px; /* Adjust padding */
+            opacity: 0.9;
         }
         .facebook {
             background-color: #3b5998; /* Facebook blue */
@@ -94,6 +81,7 @@
         }
         .social-links .fa {
             margin-right: 10px;
+            font-size: 24px; /* Adjust the size of the icons */
         }
 
         /* CSS animation for rotating the icons */
@@ -106,55 +94,41 @@
             }
         }
 
-        /* Additional style for the telegram circle */
-        .telegram-circle {
+        /* CSS animation for glowing border */
+        .social-links::before {
+            content: "";
             position: absolute;
-            bottom: 40px;
-            right: 57px;
-            background-color: #222224; /* Black background */
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: vibrateIcon 0.4s infinite alternate; /* Add vibration animation */
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 30px;
+            z-index: 1; /* Ensure it's behind the content */
+            animation: glowingBorder 5s infinite alternate; /* Add animation */
         }
 
-        .telegram-circle a {
-            color: #0088cc; /* Telegram blue */
-            text-decoration: none;
-            font-size: 24px; /* Adjust the size of the icon */
-        }
-
-        /* Vibration animation for the Telegram circle */
-        @keyframes vibrateIcon {
-            from {
-                transform: translateY(-2px);
+        @keyframes glowingBorder {
+            0% {
+                border: 6px solid #ff0000; /* Start with red border */
+                box-shadow: 0 0 20px #ff0000; /* Red glow */
             }
-            to {
-                transform: translateY(2px);
+            50% {
+                border: 6px solid #00ff00; /* Change to green border */
+                box-shadow: 0 0 20px #00ff00; /* Green glow */
+            }
+            100% {
+                border: 6px solid #0000ff; /* Change to blue border */
+                box-shadow: 0 0 20px #0000ff; /* Blue glow */
             }
         }
 
         /* Responsive styles */
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 750px) {
             .social-links {
-                width: 90%; /* Adjust width for smaller screens */
-                padding: 50px; /* Adjust padding for smaller screens */
+                width: 80%; /* Adjust width for smaller screens */
             }
             .social-links a {
                 padding: 12px 25px; /* Adjust padding for smaller screens */
-            }
-        }
-
-        @media only screen and (max-width: 400px) {
-            .social-links {
-                width: 100%; /* Adjust width for even smaller screens */
-                padding: 20px; /* Adjust padding for smaller screens */
-            }
-            .social-links a {
-                padding: 10px 20px; /* Adjust padding for even smaller screens */
             }
         }
     </style>
@@ -164,20 +138,17 @@
 <div class="social-links">
     <h2>My Social Media Profiles</h2>
     <ul>
-        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-        <li><a href="https://twitter.com/" class="twitter" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-        <li><a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-        <li><a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-        <li><a href="https://www.youtube.com/" class="youtube" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
-        <li><a href="https://t.me/telegram" class="telegram" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a></li>
-        <li><a href="https://web.whatsapp.com/" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-        <li><a href="https://www.tiktok.com/" class="tiktok" target="_blank"><i class="fab fa-tiktok"></i> Tik Tok</a></li>
-        <li><a href="https://www.snapchat.com/" class="snapchat" target="_blank"><i class="fab fa-snapchat-ghost"></i> Snapchat</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100064828142087" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i> Isroil Yuldashev</a></li>
+        <li><a href="https://twitter.com/saidabrorr" class="twitter" target="_blank"><i class="fab fa-twitter"></i> Saidabror</a></li>
+        <li><a href="https://www.instagram.com/behruz_entertemen_347/" class="instagram" target="_blank"><i class="fab fa-instagram"></i> behruz_entertement_347</a></li>
+        <li><a href="https://www.linkedin.com/in/saidabror-siddiqjonov-09290825b/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i> Saidabror Siddiqjonov</a></li>
+        <li><a href="https://www.youtube.com/user/yourusername" class="youtube" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+        <li><a href="https://t.me/WWW_2107_06" class="telegram" target="_blank"><i class="fab fa-telegram-plane"></i> Gangster</a></li>
+        <li><a href="https://wa.me/yourphonenumber" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        <li><a href="https://www.tiktok.com/@yuldashev_isroil" class="tiktok" target="_blank"><i class="fab fa-tiktok"></i> yuldashev_isroil</a></li>
+        <li><a href="https://www.snapchat.com/add/yourusername" class="snapchat" target="_blank"><i class="fab fa-snapchat-ghost"></i> Snapchat</a></li>
         <!-- Add more social media links as needed -->
     </ul>
-    <div class="telegram-circle">
-        <a href="https://t.me/Mr_XxXtEnTaCiOn" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-    </div>
 </div>
 
 </body>
